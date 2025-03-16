@@ -3,7 +3,7 @@ body {
     font-family: Arial, sans-serif;
   }
   
-  /* Styling the navigation bar */
+  
   .navbar {
     display: flex;
     justify-content: space-around;
@@ -19,15 +19,14 @@ body {
   .hidden {
     transform: translateY(-100%);
   }
-  /* Styling the links in the navigation bar */
+ 
   .navbar a {
-    color: rgb(5, 5, 5); /* White text color */
+    color: rgb(5, 5, 5);
     text-decoration: none;
     padding: 7px;
     font-size: 16px;
   }
   
-  /* add hover to the nav links*/
   .navbar a:hover {
     background-color: #575757; 
     border-radius: 4px;
