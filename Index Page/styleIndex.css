@@ -1,87 +1,130 @@
 body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-  }
-  
-  
-  .navbar {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background-color: transparent;
-    margin-top: 7px;
-    transition: transform 1.0s ease-in-out;
-    z-index: 1000;
-  }
-  .hidden {
-    transform: translateY(-100%);
-  }
- 
-  .navbar a {
-    color: rgb(5, 5, 5);
-    text-decoration: none;
-    padding: 7px;
-    font-size: 16px;
-  }
-  
-  .navbar a:hover {
-    background-color: #575757; 
-    border-radius: 4px;
-    border-bottom: 3px;
-    opacity: 0.7;
-  }
-  
-  /* this is the spcae between nav and headers */
-  .content {
-    margin-top: 65px;
-    padding: 20px;
-  }
-
-
-  /*this is all for my headers on my first page*/
-h2, h3 {
-    margin: 0;
-    font-size: 60px;
-    font-family: 'Courier New', Courier, monospace;
-}
-h1, h2, h3 {
-    margin-left: 100px;
+  display: grid;
+  grid-template-areas: 
+    "nav nav nav"
+    "header header aside"
+    "footer footer footer";
+  grid-template-columns: 10% 50% 40;
+  background-color: rgba(0, 0, 0, 0.868);
 }
 
-h1 {
-    font-size: 12px;
-    margin-left: 100px;
-    margin-top: 50px;
+header{
+  grid-area: header;
+  color: white;
+  text-align: left;
+  margin-left: 320px;
+  margin-top: 120px;
+padding-bottom: 310px;
+line-height: 1.4;
 }
-h2 {
-    font-size: 60px;
-}
-
-h3 {
-    font-size: 60px;
-}
-
-
- /*this is for the colour of my page*/
-body, html {
-    height: 100%;
-    margin: 0;
-    position: relative;
-}
-.top-half {
-    background-color: rgba(196, 196, 12, 0.822);
-    opacity: 40%;
-    width: 100%;
-    height: 60%;
-    position: absolute;
-    left: 0;
-    top: 0;
-}
-p {
+header h1{
   display: flex;
-  margin-top: 240px;
-  margin-left: 130px;
+  margin-top: 0;
+  margin-bottom: 22px;
 }
+nav {
+  grid-area: nav;
+  color: white;
+  width: 100%;
+}
+.navlist {
+  display: flex;
+  flex-direction: row;
+  gap: 90px;
+  list-style: none;
+  margin: 0;
+  margin-left: 780px;
+  list-style: none;
+  font-size: 18px;
+  font-weight: 700;
+  font-family: "quicksand", sans-serif;
+}
+main {
+  grid-area: main;
+  background-color: brown;
+}
+
+aside {
+  grid-area: aside;
+  background-color: green;
+}
+
+footer{
+  grid-area: footer;
+}
+p1 {
+  font-size: 20px;
+  font-weight: 30px;
+}
+
+p2 , p3{
+  font-weight: 30px;
+}
+h1 {
+  font-size: 60px;
+  font-weight: 800px;
+  font-family: "quicksand", sans-serif;
+}
+li a {
+  text-decoration: none;
+  color: white;
+}
+
+
+
+
+.page-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* full screen height */
+}
+.circle {
+  position: absolute;
+  top: -240px;
+  left: -250px;
+  width: 930px;
+  height: 930px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.5;
+}
+.secondcircle {
+  position: absolute;
+  top: 240px;
+  left: 250px;
+  width: 930px;
+  height: 930px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.5;
+}
+.thirdcircle{
+  position: absolute;
+  top: -120px;
+  left: 850px;
+  width: 930px;
+  height: 930px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background-color: transparent;
+  opacity: 0.5;
+}
+.triangle {
+  background-color: dodgerblue;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+  grid-column: 3;
+  grid-row: 3;
+}
+html, body {
+  overflow: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+
+
+
