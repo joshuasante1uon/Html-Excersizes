@@ -91,16 +91,14 @@ li a {
 
 
 
-@keyframes drift {
-  0%   { transform: translate(0, 0); }
-  50%  { transform: translate(30px, -30px);}
-  100% { transform: translate(0, 0); }
+@keyframes skewAndDrift {
+  0%   { transform: translate(0, 0) skew(0deg, 0deg); }
+  25%  { transform: translate(10px, -10px) skew(8deg, -8deg); }
+  50%  { transform: translate(-10px, 10px) skew(-8deg, 8deg); }
+  75%  { transform: translate(5px, -5px) skew(5deg, -5deg); }
+  100% { transform: translate(0, 0) skew(0deg, 0deg); }
 }
-@keyframes skewWiggle {
-  0%   { transform: skew(0deg, 0deg); }
-  50%  { transform: skew(10deg, -10deg); }
-  100% { transform: skew(0deg, 0deg); }
-}
+
 .circle {
   position: absolute;
   top: -240px;
@@ -111,9 +109,9 @@ li a {
   border-radius: 50%;
   background-color: transparent;
   opacity: 0.5;
-  animation: drift 4s ease-in-out infinite;
-  animation: skewWiggle 3s ease-in-out infinite;
+  animation: skewAndDrift 9s ease-in-out infinite;
 }
+
 .secondcircle {
   position: absolute;
   top: 240px;
@@ -124,8 +122,7 @@ li a {
   border-radius: 50%;
   background-color: transparent;
   opacity: 0.5;
-  animation: drift 4s ease-in-out infinite;
-  animation: skewWiggle 3s ease-in-out infinite;
+  animation: skewAndDrift 9s ease-in-out infinite;
 }
 .thirdcircle{
   position: absolute;
@@ -137,8 +134,7 @@ li a {
   border-radius: 50%;
   background-color: transparent;
   opacity: 0.5;
-  animation: drift 4s ease-in-out infinite;
-  animation: skewWiggle 3s ease-in-out infinite;
+  animation: skewAndDrift 9s ease-in-out infinite;
 }
 .triangle {
   background-color: dodgerblue;
