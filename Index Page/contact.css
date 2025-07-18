@@ -33,9 +33,6 @@ nav {
   font-family: "quicksand", sans-serif;
   margin-top: 20px;
 }
-nav a:hover {
-      color: #ff4081;
-    }
 
 main {
   grid-area: main;
@@ -92,7 +89,7 @@ li a {
   width: 30px;
   height: 30px;
 }
-.form-container {
+.container {
   background: #575353;
   padding: 32px;
   border-radius: 8px;
@@ -143,7 +140,7 @@ button {
   font-size: 1rem;
 }
 
-button:hover {
+button   :hover {
   background: #3fab9b;
 }
 @keyframes skewAndDrift {
@@ -204,7 +201,7 @@ button:hover {
   animation: skewAndDrift 9s ease-in-out infinite;
   pointer-events: none;
 }
-.animation-wrapper {
+.animationwrap {
   position: relative;
   overflow: hidden;
   width: 100%;
