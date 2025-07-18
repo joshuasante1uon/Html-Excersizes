@@ -2,10 +2,13 @@ body {
   display: grid;
   grid-template-areas: 
     "nav nav nav"
-    "header header aside"
+    "header header header"
     "footer footer footer";
-  grid-template-columns: 10% 50% 40;
+  grid-template-columns: 10% 50% 40%;
   background-color: rgba(0, 0, 0, 0.868);
+  overflow-x: hidden;
+  margin: 0 ;
+  padding: 0;
 }
 
 
@@ -41,7 +44,23 @@ aside {
   
 }
 footer{
+  display: flex;
   grid-area: footer;
+  background-color: gray;
+  margin-top: auto;
+  height: 500px;
+  text-align: center;
+}
+.contactinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;      
+  justify-content: center;   
+  text-align: center;
+  height: 100vh;           
+  font-size: 18px;
+  gap: 10px;
+  padding-bottom: 130px;            
 }
 h1 {
   font-size: 60px;
@@ -73,7 +92,7 @@ li a {
 }
 .form-container {
   background: #575353;
-  padding: 2rem;
+  padding: 32px;
   border-radius: 8px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.1);
   max-width: 400px;
@@ -82,15 +101,19 @@ li a {
   left: 550PX;
   top: 180PX;
   color: white;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 input[type="email"],
 textarea {
   width: 100%;
-  padding: 0.5rem;
+  padding: 8px;
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
   resize: vertical;
+  text-align: center;
   
 }textarea {
   min-height: 120px;
@@ -98,25 +121,28 @@ textarea {
 }
 
 .options {
-  margin: 1rem 0;
+  margin: 17px 0;
+  align-items: center;
+  text-align: center;
 }
 
 .options input {
-  margin-right: 0.5rem;
+  margin-right: 8px;
+
 }
 
 button {
-  background: #4285F4;
+  background: #07080a;
   color: #fff;
   border: none;
-  padding: 0.7rem 1.2rem;
+  padding: 12px 20px;
   border-radius: 4px;
   cursor: pointer;
   font-size: 1rem;
 }
 
 button:hover {
-  background: #357ae8;
+  background: #3fab9b;
 }
 @keyframes skewAndDrift {
   0%   { transform: translate(0, 0) skew(0deg, 0deg); }
@@ -126,29 +152,60 @@ button:hover {
   100% { transform: translate(0, 0) skew(0deg, 0deg); }
 }
 
-.tri {
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-bottom: 100px solid #000; /* Triangle color */
-}
-
-.secondtri {
-   width: 100px;
-  height: 100px;
-  background-color: #fff; /* White square */
-  border: 2px solid black; /* Optional border */
-}
-.thirdtri{
-  position: absolute;
-  top: -120px;
-  left: 850px;
+ .square{
   width: 930px;
   height: 930px;
-  border: 2px solid white;
-  border-radius: 50%;
   background-color: transparent;
+  border: 2px solid white;
   opacity: 0.5;
+  position: absolute;
+  top: -280px;
+  left: -90px;
   animation: skewAndDrift 9s ease-in-out infinite;
+  pointer-events: none;
+}
+.secondsq{
+   width: 930px;
+  height: 930px;
+  background-color: transparent;
+  border: 2px solid white;
+  opacity: 0.5;
+  position: absolute;
+  top: 400px;
+  left: 390px;
+  animation: skewAndDrift 9s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+
+}
+.thirdsq{
+  width: 930px;
+  height: 930px;
+  background-color: transparent;
+  border: 2px solid white;
+  opacity: 0.5;
+  position: absolute;
+  top: -400px;
+  left: 700px;
+  animation: skewAndDrift 9s ease-in-out infinite;
+  pointer-events: none;
+}
+.fourthsq{
+  width: 930px;
+  height: 930px;
+  background-color: transparent;
+  border: 2px solid white;
+  opacity: 0.5;
+  position: absolute;
+  top: -500px;
+  left: 500px;
+  animation: skewAndDrift 9s ease-in-out infinite;
+  pointer-events: none;
+}
+.animation-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
 }

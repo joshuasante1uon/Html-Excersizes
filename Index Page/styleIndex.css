@@ -55,6 +55,7 @@ aside {
 }
 footer{
   grid-area: footer;
+  background-color: grey;
 }
 p1 {
   font-size: 20px;
@@ -98,6 +99,7 @@ li a {
   background-color: transparent;
   opacity: 0.5;
   animation: skewAndDrift 9s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .secondcircle {
@@ -111,6 +113,7 @@ li a {
   background-color: transparent;
   opacity: 0.5;
   animation: skewAndDrift 9s ease-in-out infinite;
+  pointer-events: none;
 }
 .thirdcircle{
   position: absolute;
@@ -123,6 +126,7 @@ li a {
   background-color: transparent;
   opacity: 0.5;
   animation: skewAndDrift 9s ease-in-out infinite;
+  pointer-events: none;
 }
 html, body {
   overflow: hidden;
