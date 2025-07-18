@@ -33,7 +33,9 @@ nav {
   font-family: "quicksand", sans-serif;
   margin-top: 20px;
 }
-
+nav a:hover {
+      color: #ff4081;
+    }
 
 main {
   grid-area: main;
